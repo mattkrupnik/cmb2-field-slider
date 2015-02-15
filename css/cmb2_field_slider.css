@@ -1,0 +1,10 @@
+#value{
+	float:right;
+	font: 400 12px Arial;
+	color: #888;
+}
+#value:before {
+	content: "Value: ";
+}
+
+
