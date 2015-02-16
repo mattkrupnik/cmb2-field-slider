@@ -1,7 +1,7 @@
 jQuery( document ).ready(function($) {
 
 	// Loop through all cmb-type-slider-field instances and instantiate the slider UI
-	$( '.cmb-type-slider-field' ).each(function() {
+	$( '.cmb-type-own-slider' ).each(function() {
 		var $this       = $( this );
 		var $value      = $this.find( '.own-slider-field-value' );
 		var $slider     = $this.find( '.own-slider-field' );
