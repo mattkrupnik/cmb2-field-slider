@@ -22,19 +22,21 @@ class OWN_Field_Slider {
 		// Only enqueue scripts if field is used.
 		$this->setup_admin_scripts();
 
-		echo '<input type="hidden" id="start" value="'.absint( $field_escaped_value ).'">';
-		echo '<input type="hidden" id="min" value="'.$field->min().'">';
-		echo '<input type="hidden" id="max" value="'.$field->max().'">';
+		echo '<div class="own-slider-field"></div>';
 
-		echo '<div id="slider"></div>';
-
-		echo '<input type="hidden" id="amount" name="' . $field->id() . '" readonly />';
-
+		echo $field_type_object->input( array(
+			'type'       => 'hidden',
+			'class'      => 'own-slider-field-value',
+			'readonly'   => 'readonly',
+			'data-start' => absint( $field_escaped_value ),
+			'data-min'   => $field->min(),
+			'data-max'   => $field->max(),
+			'desc'       => '',
+		) );
 
 		echo '<span class="own-slider-field-value-display">'. $field->value_label() .' <span class="own-slider-field-value-text"></span></span>';
 
 		$field_type_object->_desc( true, true );
-
 	}
 
 	public function setup_admin_scripts( ) {
