@@ -17,22 +17,20 @@ class OWN_Field_Slider {
 		add_filter( 'cmb2_render_own_slider',  array( $this, 'own_slider_field' ), 10, 5 );
 	}
 
-	public function own_slider_field( $field_args, $field_escaped_value, $field_object_id, $field_object_type, $field_type_object ) {
+	public function own_slider_field( $field, $field_escaped_value, $field_object_id, $field_object_type, $field_type_object ) {
 
 		// Only enqueue scripts if field is used.
 		$this->setup_admin_scripts();
 
-		$value = $field_args->escaped_value() ? $field_args->escaped_value() : $field_args->start_value();
-
-		echo '<input type="hidden" id="start" value="'.$value.'">';
-		echo '<input type="hidden" id="min" value="'.$field_args->min().'">';
-		echo '<input type="hidden" id="max" value="'.$field_args->max().'">';
+		echo '<input type="hidden" id="start" value="'.absint( $field_escaped_value ).'">';
+		echo '<input type="hidden" id="min" value="'.$field->min().'">';
+		echo '<input type="hidden" id="max" value="'.$field->max().'">';
 
 		echo '<div id="slider"></div>';
 
-		echo '<input type="hidden" id="amount" name="' . $field_args->id() . '" readonly />';
+		echo '<input type="hidden" id="amount" name="' . $field->id() . '" readonly />';
 
-		echo '<p class="cmb2-metabox-description">'.$field_args->desc().'<span id="value"></span></p>';
+		echo '<p class="cmb2-metabox-description">'.$field->desc().'<span id="value"></span></p>';
 	}
 
 	public function setup_admin_scripts( ) {
