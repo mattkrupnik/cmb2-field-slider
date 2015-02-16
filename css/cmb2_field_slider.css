@@ -4,7 +4,3 @@
 	font-size: 12px;
 	color: #888;
 }
-
-.own-slider-field-value-display:before {
-	content: "Value: ";
-}

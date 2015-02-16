@@ -15,13 +15,14 @@ You can install slider field as a Wordpress plugin
 
 ```php
 array(
-	'name'    => 'Slider Field',
-	'desc'    => 'Set your value.',
-	'id'      => $prefix . 'slider',
-	'type'    => 'own_slider',
-	'min'     => '0',
-	'max'     => '200',
-	'default' => '0', // start value
+	'name'        => 'Slider Field',
+	'desc'        => 'Set your value.',
+	'id'          => $prefix . 'slider',
+	'type'        => 'own_slider',
+	'min'         => '0',
+	'max'         => '200',
+	'default'     => '0', // start value
+	'value_label' => 'Value:',
 ),
 ```
 ## Screenshots

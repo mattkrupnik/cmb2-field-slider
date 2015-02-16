@@ -31,7 +31,7 @@ class OWN_Field_Slider {
 		echo '<input type="hidden" id="amount" name="' . $field->id() . '" readonly />';
 
 
-		echo '<span class="own-slider-field-value-display"></span>';
+		echo '<span class="own-slider-field-value-display">'. $field->value_label() .' <span class="own-slider-field-value-text"></span></span>';
 
 		$field_type_object->_desc( true, true );
 
