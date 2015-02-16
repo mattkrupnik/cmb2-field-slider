@@ -30,7 +30,11 @@ class OWN_Field_Slider {
 
 		echo '<input type="hidden" id="amount" name="' . $field->id() . '" readonly />';
 
-		echo '<p class="cmb2-metabox-description">'.$field->desc().'<span id="value"></span></p>';
+
+		echo '<span class="own-slider-field-value-display"></span>';
+
+		$field_type_object->_desc( true, true );
+
 	}
 
 	public function setup_admin_scripts( ) {
