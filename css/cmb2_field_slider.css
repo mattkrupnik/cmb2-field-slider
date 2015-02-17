@@ -1,10 +1,6 @@
-#value{
+.own-slider-field-value-display {
 	float:right;
-	font: 400 12px Arial;
+	font-weight: 400;
+	font-size: 12px;
 	color: #888;
 }
-#value:before {
-	content: "Value: ";
-}
-
-
