@@ -13,6 +13,7 @@ jQuery( document ).ready(function($) {
 			value : slider_data.start,
 			min   : slider_data.min,
 			max   : slider_data.max,
+			step  : slider_data.step,
 			slide : function( event, ui ) {
 				$value.val( ui.value );
 				$text.text( ui.value );
