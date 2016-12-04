@@ -21,7 +21,7 @@ array(
 	'type'        => 'own_slider',
 	'min'         => '0',
 	'max'         => '200',
-	'step'         => '5',
+	'step'        => '5',
 	'default'     => '0', // start value
 	'value_label' => 'Value:',
 ),
@@ -29,3 +29,10 @@ array(
 ## Screenshots
 
 ![Image](screen-1.jpg?raw=true)
+
+## Changelog
+
+## 1.1.2 - 04-12-2016
+
+* Added support for repeatable group ( [#3](https://github.com/mattkrupnik/cmb2-field-slider/issues/3) ).
+* Added `step` attribute by [jondcampbell](https://github.com/jondcampbell), ( [#5](https://github.com/mattkrupnik/cmb2-field-slider/pull/5) ).
