@@ -1,17 +1,17 @@
 <?php
 /**
  * Plugin Name: CMB2 Field Slider
- * Plugin URI:  https://github.com/qmatt/cmb2-field-slider
+ * Plugin URI:  https://github.com/mattkrupnik/cmb2-field-slider
  * Description: Slider field type for Custom Metaboxes and Fields for WordPress
- * Version:     0.1.0
- * Author:      Mateusz Krupnik
+ * Version:     1.1.2
+ * Author:      Matt Krupnik
  * License:     GPLv2+
  */
 
 
 class OWN_Field_Slider {
 
-	const VERSION = '0.1.0';
+	const VERSION = '1.1.2';
 
 	public function hooks() {
 		add_filter( 'cmb2_render_own_slider',  array( $this, 'own_slider_field' ), 10, 5 );
@@ -44,11 +44,10 @@ class OWN_Field_Slider {
 
 		wp_enqueue_script( 'cmb2_field_slider_js',  plugins_url( 'js/cmb2_field_slider.js', __FILE__ ), array( 'jquery', 'jquery-ui-slider' ), self::VERSION );
 
-		wp_register_style( 'slider_ui', 'http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css', array(), '1.0' );
+		wp_register_style( 'slider_ui', '//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css', array(), '1.0' );
 		wp_enqueue_style( 'cmb2_field_slider_css', plugins_url( 'css/cmb2_field_slider.css', __FILE__ ), array( 'slider_ui' ), self::VERSION );
 
 	}
 }
 $own_field_slider = new OWN_Field_Slider();
 $own_field_slider->hooks();
-
