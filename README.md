@@ -21,6 +21,7 @@ array(
 	'type'        => 'own_slider',
 	'min'         => '0',
 	'max'         => '200',
+	'step'         => '5',
 	'default'     => '0', // start value
 	'value_label' => 'Value:',
 ),

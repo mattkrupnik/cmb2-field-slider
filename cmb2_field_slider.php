@@ -31,6 +31,7 @@ class OWN_Field_Slider {
 			'data-start' => absint( $field_escaped_value ),
 			'data-min'   => $field->min(),
 			'data-max'   => $field->max(),
+			'data-step'  => $field->step(),
 			'desc'       => '',
 		) );
 
