@@ -5,6 +5,7 @@
  * Description: Slider field type for Custom Metaboxes and Fields for WordPress
  * Version:     1.1.2
  * Author:      Matt Krupnik
+ * Author URI:  http://mattkrupnik.com
  * License:     GPLv2+
  */
 
