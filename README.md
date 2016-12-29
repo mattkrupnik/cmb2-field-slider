@@ -1,4 +1,4 @@
-# CMB Field Type: Slider
+# CMB2 Field Type: Slider
 
 ## Desc
 Slider field type for CMB2.
