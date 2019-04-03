@@ -3,7 +3,7 @@
 ## Desc
 Slider field type for CMB2.
 
-##Install
+## Install
 You can install slider field as a Wordpress plugin
 
 1. Download plugin
